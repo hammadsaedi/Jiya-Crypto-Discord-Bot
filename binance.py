@@ -2,7 +2,7 @@ import requests
 import json
 
 # to get crypto price from bianance API
-def getPrices(symbol):
+def getPrice(symbol):
   parameters = {
   'symbol':symbol
   }
@@ -10,7 +10,7 @@ def getPrices(symbol):
   r = requests.get(url=URL, params=parameters)
   data = r.json()
   # Fetching Price
-  currencyPrice = float(data["price"])
+  currencyPrice = eval(data["price"])
   # Rounding off
   if currencyPrice > 1:
     currencyPrice = round(currencyPrice, 2)

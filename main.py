@@ -54,12 +54,23 @@ async def on_message(message):
       # Requested Currency
       requestedData = (message.content.lower()[2:]).upper()
       # Fetching Price
-      currencyPrice = binance.getPrices(requestedData)
+      currencyPrice = binance.getPrice(requestedData)
       # Sending Message
       await message.channel.send(f'{requestedData} is currently trading at {currencyPrice}')
     except KeyError:
       await message.channel.send(f'Sorry {requestedData} trading pair is not supported.')
-
+  # Additional Commands
+  elif message.content.startswith('$support'):
+    # Sending Message
+    await message.channel.send(f'This Bot supports more than 15,000 crypto currencies from coin market cap and all trading pairs from binance exchange.')
+  elif message.content.startswith('$commands'):
+    # Sending Message
+    await message.channel.send(f'To fetch price form CoinMarketCap:\np <coin_symbol>\nTo Fetch price from Binance:\nt <trading_pair>')
+  elif message.content.startswith('$authors'):
+    # Sending Message
+    await message.channel.send(f'FA21-BCS-020  Fasiha Arshad')
+    await message.channel.send(f'FA21-BCS-023  Hammad Saeedi')
+  
 
 # Keep Active
 keep_alive()
