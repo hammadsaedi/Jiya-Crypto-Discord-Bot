@@ -5,7 +5,7 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
 
-# cmc api key
+# cmc api keyA
 try:
   CMC_KEY = os.environ['CMC_KEY']
 except KeyError:
@@ -27,5 +27,7 @@ def getPrice(symbol):
   session.headers.update(headers)
   response = session.get(url, params=parameters)
   data = json.loads(response.text)
-  #data = dict(data)
-  return data
+  
+  if 'data' in data:
+    return data['data'].get(symbol.upper())
+  return None
