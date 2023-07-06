@@ -100,7 +100,7 @@ To interact with the Jiya bot, please refer to the `User_Guide.md` file. It prov
 
 ## Recommendation
 
-Based on the requirements and recommendations, the following features and enhancements are recommended for the Jiya project:
+Following features and enhancements are recommended for the Jiya project:
 
 ### Web Panel
 - Develop a web-based panel for administrators to manage the Jiya bot.
