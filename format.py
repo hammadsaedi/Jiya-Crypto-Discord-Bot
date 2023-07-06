@@ -45,3 +45,20 @@ def format_favorite_coins(coins):
       formatted_coins.append(f'{index}. Failed to fetch coin data.')
 
   return '\n'.join(formatted_coins)
+
+def format_portfolio(portfolio):
+    formatted_portfolio = []
+
+    for coin, quantity in portfolio.items():
+        try:
+            payload = coinMarketCap.getPrice(coin)
+            if payload is not None:
+                price = payload['quote']['USD']['price']
+                value = round_price(quantity * price)
+                formatted_entry = f'{coin}: {quantity} (Value: {value} USD)'
+                formatted_portfolio.append(formatted_entry)
+        except KeyError:
+            formatted_portfolio.append(f'{coin}: Failed to fetch coin data.')
+
+    return '\n'.join(formatted_portfolio)
+
