@@ -75,28 +75,28 @@ To interact with the Jiya bot, please refer to the `User_Guide.md` file. It prov
 ## Demo
 
 ### Get Price
-![Get Price](get.jpg)
+![Get Price](pics/get.jpg)
 
 ### Add to Favorite
-![Add](add.jpg)
+![Add](pics/add.jpg)
 
 ### Remove from Favorite
-![Remove](remove.jpg)
+![Remove](pics/remove.jpg)
 
 ### Get Favorite
-![Favorite](fav.jpg)
+![Favorite](pics/fav.jpg)
 
 ### Buy Coin
-![Buy](buy.jpg)
+![Buy](pics/buy.jpg)
 
 ### Sell Coin
-![Sell](sell.jpg)
+![Sell](pics/sell.jpg)
 
 ### Get Portfolio
-![Portfolio](portfolio.jpg)
+![Portfolio](pics/portfolio.jpg)
 
 ### Help
-![Help](help.jpg)
+![Help](pics/help.jpg)
 
 ## Recommendation
 
