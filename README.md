@@ -33,6 +33,12 @@ The project utilizes the following dependencies:
 - other dependencies listed in `pyproject.toml`
 
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables. In Replit, navigate to the "Secrets" tab in the left sidebar.
+- `BOT_TOKEN` Discord Bot Token
+- `CMC_TOKEN` CoinMarketCap API Key.
+
 
 ## Installation
 
@@ -51,170 +57,75 @@ To run the Jiya bot, follow these steps:
    - Open the `main.py` file.
    - Click the "Run" button in Replit to start the bot.
 
-
-
-## Usage
-
-To interact with the Jiya bot, use the following commands in a Discord channel where the bot is present:
-
-- *`$get <coin_symbol>`*: Retrieves detailed information about the specified cryptocurrency.
-
-   Example: `$get BTC`
-
-   This command will retrieve information such as the current price, market cap, and trading volume of Bitcoin (BTC).
-
-- *`$add <coin_symbol>`*: Adds the specified cryptocurrency to your favorites list.
-
-   Example: `$add ETH`
-
-   This command will add Ethereum (ETH) to your list of favorite cryptocurrencies.
-
-- *`$remove <coin_symbol>`*: Removes the specified cryptocurrency from your favorites list.
-
-   Example: `$remove BTC`
-
-   This command will remove Bitcoin (BTC) from your list of favorite cryptocurrencies.
-
-- *`$favorites`*: Retrieves your favorite cryptocurrencies.
-
-   Example: `$favorites`
-
-   This command will display a list of your favorite cryptocurrencies along with their current prices.
-
-- *`$buy <coin_symbol> <quantity> <price>`*: Simulates buying a certain quantity of a cryptocurrency at a specified price.
-
-   Example: `$buy BTC 1 current`
-
-   This command will simulate buying 1 Bitcoin (BTC) at the current market price.
-
-- *`$sell <coin_symbol> <quantity> <price>`*: Simulates selling a certain quantity of a cryptocurrency at a specified price.
-
-   Example: `$sell ETH 2 500`
-
-   This command will simulate selling 2 Ethereum (ETH) at a price of $500 each.
-
-- *`$portfolio`*: Retrieves your cryptocurrency portfolio.
-
-   Example: `$portfolio`
-
-   This command will display your current cryptocurrency portfolio, including the coins you own and their respective quantities.
-
-- *`$transfer <quantity> <coin_symbol> <recipient_mention>`*: Transfers a specified quantity of a cryptocurrency to another user.
-
-   Example: `$transfer 0.5 BTC @username`
-
-   This command will transfer 0.5 Bitcoin (BTC) to the user mentioned in the command.
-
-Please note that for commands requiring additional parameters (such as quantity and price), make sure to provide the correct values. Additionally, coin symbols should be entered in uppercase letters.
-
-
-
 ## API Reference
 
-The Jiya bot does not expose a public API. However, it utilizes the following internal methods for its functionality.
-
-### CoinMarketCap API Integration
-
-#### `get_price(coin_symbol)`
-
-Retrieves the current price of a specific cryptocurrency from the CoinMarketCap API.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-
-#### `get_market_data(coin_symbol)`
-
-Retrieves detailed market data for a specific cryptocurrency from the CoinMarketCap API.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-
-### Favorites Management
-
-#### `add_favorite(coin_symbol)`
-
-Adds a cryptocurrency to the user's favorites list.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-
-#### `remove_favorite(coin_symbol)`
-
-Removes a cryptocurrency from the user's favorites list.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-
-### Portfolio Management
-
-#### `get_portfolio()`
-
-Retrieves the user's cryptocurrency portfolio.
-
-### Trading Simulation
-
-#### `buy_coin(coin_symbol, quantity, price)`
-
-Simulates buying a specific quantity of a cryptocurrency at a specified price.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-  - `quantity`: The quantity to buy.
-  - `price`: The price at which to buy.
-
-#### `sell_coin(coin_symbol, quantity, price)`
-
-Simulates selling a specific quantity of a cryptocurrency at a specified price.
-
-- Parameters:
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-  - `quantity`: The quantity to sell.
-  - `price`: The price at which to sell.
-
-### Transfer of Cryptocurrency
-
-#### `transfer_coin(quantity, coin_symbol, recipient_mention)`
-
-Transfers a specified quantity of a cryptocurrency to another user.
-
-- Parameters:
-  - `quantity`: The quantity to transfer.
-  - `coin_symbol`: The symbol or ticker of the cryptocurrency.
-  - `recipient_mention`: The mention of the recipient user.
-
+For detailed information about the internal API and utility functions used in the Jiya bot, please refer to the `API_Reference.md` file. It provides comprehensive documentation and guidelines for developers who want to understand and utilize the Jiya API.
 
 ## Contributing
 
-Contributions are always welcome!
+Thank you for considering contributing to the Jiya project! Contributions are always welcome and greatly appreciated. To get started, please refer to the `contributing.md` file. It outlines various ways in which you can contribute to the project and provides guidelines to follow when making contributions.
 
-See `contributing.md` for ways to get started.
+We kindly ask all contributors to adhere to the project's code of conduct. By participating in this project, you are expected to uphold the principles of respect, inclusivity, and professionalism.
 
-Please adhere to this project's `code of conduct`.
+## Usage
+
+To interact with the Jiya bot, please refer to the `User_Guide.md` file. It provides detailed instructions and examples on how to use each command and functionality offered by the Jiya bot. Whether you want to retrieve coin information, manage favorites, simulate buying and selling, track portfolios, or transfer coins, the user guide will provide you with the necessary guidance.
 
 
-## Authors
+## Demo
 
-- [@hammadsaeedi](https://www.github.com/hammadsaeedi)
-- [@fasiiha](https://www.github.com/fasiiha)
+Insert gif or link to demo
 
-## License
+## Recommendation
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Based on the requirements and recommendations, the following features and enhancements are recommended for the Jiya project:
+
+### Web Panel
+- Develop a web-based panel for administrators to manage the Jiya bot.
+- Add a broadcast message feature to send messages to all servers.
+- Implement server-specific messaging functionality.
+
+### Ads
+- Introduce an ads message feature for administrators to send promotional messages.
+- Provide customizable ad templates.
+- Consider adding scheduling options for ad messages.
+
+### Web Authentication
+- Implement authentication for the web panel.
+- Set different access levels for marketing team and administrators.
+
+These recommendations aim to improve the functionality and user experience of the Jiya bot, allowing administrators to efficiently manage and engage with users. Please note that these recommendations require careful planning and development to integrate them into the existing Jiya project.
+
+
+## Lessons Learned
+
+During the development of the Jiya project, several soft lessons were learned and valuable insights were gained. Here are some key takeaways:
+
+1. **Effective Communication**: Clear and open communication is essential for successful collaboration. It is important to establish effective channels of communication, provide timely updates, and actively listen to team members' feedback and ideas.
+
+2. **Adaptability**: The development process often requires adapting to new technologies, tools, and methodologies. Being open to learning and embracing change is crucial for staying current and improving skills.
+
+3. **Problem-Solving**: Building a complex project like Jiya inevitably involves encountering challenges and obstacles. Developing strong problem-solving skills and a proactive mindset helps in overcoming these challenges and finding innovative solutions.
+
+4. **Documentation and Documentation**: Documenting the project thoroughly, including code comments, API references, and user guides, promotes clarity, maintainability, and ease of use. It helps team members understand the project and assists users in utilizing its features effectively.
+
+5. **Collaboration and Teamwork**: Working as a team fosters creativity, shared responsibility, and a sense of community. Emphasizing collaboration, encouraging diverse perspectives, and leveraging each team member's strengths greatly contribute to the success of the project.
+
+6. **Continuous Learning**: The development process is an opportunity for continuous learning and growth. Embracing a growth mindset, seeking out new knowledge, and staying updated with the latest industry trends enhance professional development.
+
+By reflecting on these soft lessons and incorporating them into future projects, the Jiya team can further improve their skills, processes, and project outcomes.
 
 ## Acknowledgements
 
 - [Discord.py](https://discordpy.readthedocs.io/): Python library for creating Discord bots.
 - [CoinMarketCap API](https://coinmarketcap.com/api/): API for retrieving cryptocurrency data.
 
+## Authors
+
+- [@hammadsaeedi](https://www.github.com/hammadsaeedi)
+- [@fasiiha](https://www.github.com/fasiiha)
 
 
-## Environment Variables
+## License
 
-To run this project, you will need to add the following environment variables. In Replit, navigate to the "Secrets" tab in the left sidebar.
-- `BOT_TOKEN` Discord Bot Token
-- `CMC_TOKEN` CoinMarketCap API Key.
-
-
-## Demo
-
-Insert gif or link to demo
+[MIT](https://choosealicense.com/licenses/mit/)
